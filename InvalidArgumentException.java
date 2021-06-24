@@ -1,20 +1,17 @@
 package Exceptions;
 
+
 /**
- * An Invalid Argument Exception class
- * Prints out what argument is invalid
- * For use in ITCS 2214 Data Structures & Algorithms
- * UNC Charlotte, 2016
+ * Exception handler for when an element isn't in a collection
  * @author clatulip
  */
 public class InvalidArgumentException extends Exception {
+    public InvalidArgumentException(String arg) {
+        super("The argument " + arg + "was invalid.");
+    }
 
     public InvalidArgumentException() {
-        super("The collection is empty.");
-    }
-    
-    public InvalidArgumentException(String collection) {
-        super("The " + collection + " is empty.");
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

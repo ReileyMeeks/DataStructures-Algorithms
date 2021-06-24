@@ -29,18 +29,17 @@ public class LinkedStack<T> implements StackADT<T> {
     
     @Override
     public void push(T element) {
-        SinglyLinkedNode<T> temp = new SinglyLinkedNode<T>(element);
-        
-        if (!isEmpty()) {
-            temp.setNext(top);
-        }
-        
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        SinglyLinkedNode<T> temp = new 
+            SinglyLinkedNode<T>(element);
+        temp.setNext(top);
         top = temp;
         count++;
     }
 
     @Override
     public T pop() throws EmptyCollectionException {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         if (this.isEmpty()) 
             throw new EmptyCollectionException();
         
@@ -53,13 +52,13 @@ public class LinkedStack<T> implements StackADT<T> {
 
     @Override
     public T peek() throws EmptyCollectionException {
-        if (!isEmpty()) {
-            return top.getElement();
-        } else {
-            throw new EmptyCollectionException();
-        }       
+        //TODO: Implement this method
+        //throw new UnsupportedOperationException("Not SupportedYet");
         
-
+        if (this.top == null || this.size() == 0) {
+            throw new EmptyCollectionException("peek()");
+        }
+         return this.top.getElement();
     }
 
     @Override
