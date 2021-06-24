@@ -36,7 +36,7 @@ public class SinglyLinkedNode<T> {
     
     /**
      * Sets the node that follows this one
-     * @param n LinearNode to follow this one
+     * @param n SinglyLinkedNode to follow this one
      */
     public void setNext(SinglyLinkedNode<T> n) 
     {
